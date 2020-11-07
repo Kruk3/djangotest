@@ -6,14 +6,15 @@
 </head>
 <body>
 <div>
-    <p>data publikacji:</p>
-    <h2><a href="">Tytuł</a></h2>
-<p>aaaaa</p>
+    <h2><a href="">Najnowsze wpisy:</a></h2>
 </div>
+
+{% for post in posts %}
 <div>
-    <p>data publikacji:</p>
-    <h2><a href="">Tytuł</a></h2>
-<p>aaaaa</p>
+    <p>Data publikacji: {{ post.published_date }}</p>
+    <h2><a href="">{{ post.title }}:</a></h2>
+    <p>{{ post.text|linebreaksbr }}</p>
 </div>
+{% endfor %}
 </body>
 </html>
